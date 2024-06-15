@@ -35,7 +35,7 @@ const App = () => {
     setWinner(null);
   };
 
-  const status = winner ? `${winner === 'X' ? 'Player 1' : 'Player 2'} wins!` : `Next player: ${currentPlayer}`;
+  const status = winner ? `${winner === 'X' ? 'Player 1' : 'Player 2'} wins!` : `Current player: ${currentPlayer}`;
 
   const renderSquare = (index) => (
     <button className="square" onClick={() => handleClick(index)}>
@@ -63,7 +63,7 @@ const App = () => {
         </div>
       </div>
       <div className="game-info">
-        <div>{status}</div>
+        <div style={{color:"white",textAlign:"center"}}>{status}</div>
         <button onClick={handleRestart} className='Reset' style={{marginTop:"30px"}}>Restart Game</button>
       </div>
     </div>
